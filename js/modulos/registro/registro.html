@@ -1,0 +1,41 @@
+<div class="mui-container pantalla" ng-controller="registro as vm">
+	<div class="contenedor">
+		<div class="mui-appbar">
+		<div class="mui--text-center"><span class="mui--text-title">Registrar</span></div>
+		</div>
+		<div class="mui-panel">		
+			<form novalidate class="mui-form" name="regis">
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="nombre" type="text" ng-model="vm.registro.nombre" required>
+				<label for="">Nombre</label>
+			</div>
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="apellidoP" type="text" ng-model="vm.registro.apellidoP" required>
+				<label for="">Apellido Paterno</label>
+			</div>
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="apellidoM" type="text" ng-model="vm.registro.apellidoM" required>
+				<label for="">Apellido Materno</label>
+			</div>
+
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="control" type="number" ng-model="vm.registro.control" min="1" max="999999999" required>
+				<label for="">Numero de Control</label>
+			</div>
+
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="password" type="password" ng-model="vm.registro.password" required>
+				<label for="">Password</label>
+			</div>
+			<div class="mui-textfield mui-textfield--float-label">
+				<input name="rpassword" type="password" ng-keyup="vm.validPass()" ng-model="vm.rpassword" required>
+				<label for="">Repite password</label> 
+			</div>
+
+			</div>  
+				  <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary" ng-click="vm.registrar()" style="width: 100%;" ng-disabled="!regis.$valid && vm.valid">Registrar {{regis.$valid}}</button>				  
+			</form>
+			
+		</div>
+	</div>
+</div>

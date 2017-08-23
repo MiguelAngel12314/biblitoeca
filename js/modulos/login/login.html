@@ -1,0 +1,23 @@
+<div class="mui-container pantalla">
+	<div class="contenedor">
+		<div class="mui-appbar">
+		<div class="mui--text-center"><span class="mui--text-title">ACCESO</span></div>
+		</div>
+		<div class="mui-panel">		
+			<form novalidate class="mui-form">
+			<div class="mui-textfield mui-textfield--float-label">
+				<input type="number" ng-model="vm.login.control" required>
+				<label for="">No Control</label>
+			</div>
+
+			<div class="mui-textfield mui-textfield--float-label">
+			  <input type="text" ng-model="vm.login.password" required>		
+			  <label for="">Password</label>
+			</div>  
+				  <button class="mui-btn mui-btn--raised mui-btn--primary" ng-click="vm.login()" style="width: 100%;">Enviar</button>				  
+			</form>
+			<a class="mui-btn mui-btn--raised mui-btn--primary" href="#/registro" style="width: 100%;">Registrar</a>
+			
+		</div>
+	</div>
+</div>

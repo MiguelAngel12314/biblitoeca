@@ -1,0 +1,12 @@
+<div id="sidedrawer" class="mui--no-user-select">
+      <div id="sidedrawer-brand" class="mui--appbar-line-height">
+        <span class="mui--text-title">Bibioteca</span>
+      </div>
+      <div class="mui-divider"></div>
+      
+      <ul>
+        <li ng-repeat="url in vm.url">
+          <a ng-href="#/{{url}}"><strong ng-class="{seleccion: vm.seleccion == url}">{{url}}</strong></a>
+        </li>
+      </ul>
+    </div>

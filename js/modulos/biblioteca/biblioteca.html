@@ -1,0 +1,38 @@
+<menu seleccion="vm.seleccion"></menu>
+<header id="header">
+      <div class="mui-appbar mui--appbar-line-height">
+        <div class="mui-container-fluid">
+          <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+          <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Biblioteca</span>
+        </div>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="mui--appbar-height"></div>
+      <div class="mui-container-fluid">
+      {{vm.cadena}}
+        <br>
+        <h1>Biblioteca</h1>               
+        <div class="mui-panel">
+          
+         <div class="mui-row mui--divider-bottom">
+            <div class="mui-col-xs-12 mui-col-md-3" ng-repeat="adeudos in vm.adeudos">
+              <div class="grid">
+          
+            <img src="{{adeudos.img}}" alt="img23" style="width: 100%;" />
+              <h2>{{adeudos.titulo}}</span></h2>
+              <!-- <a href="#">View more</a> -->
+             </div>      
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="mui-container-fluid">
+        <br>
+        Made with ♥ by <a href="https://www.muicss.com">MUI</a>
+      </div>
+    </footer>
