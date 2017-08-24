@@ -19,7 +19,7 @@
 	menuCrl.$inject = [];
 	function menuCrl() {
 		var vm = this;
-		vm.url = ['adeudos','biblioteca','configuracion',"salir"];
+		vm.url = ['adeudos','biblioteca','upload','configuracion',"salir"];
 	}
 
 

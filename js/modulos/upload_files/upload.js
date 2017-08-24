@@ -5,9 +5,24 @@
 	.controller("upload",upload);
 
 
-	upload.$inject = [];
+	upload.$inject = ['uploadService'];
 
-	function upload() {
+	function upload(uploadService) {
 		var vm = this;
+
+		/*functions*/
+		vm.crearFolder = crearFolder;
+
+		function crearFolder() {
+			uploadService.init()
+				  .then(createFolder)
+				  .catch(createFolder);
+
+			function createFolder(data) {
+				console.log(data);
+			}
+
+			// console.log(vm.newfolder);
+		}
 	}
 })();
