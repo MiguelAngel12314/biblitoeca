@@ -8,12 +8,14 @@
 
 	function uploadService($http,$q,SERVER) {
 		return {
-			init : function() {
+			init : function(datos) {
+				console.log(datos);
 				var deferido = $q.defer();
 
 				var http = {
-					method:"GET",
+					method:"POST",
 					url : SERVER+"createFolder",
+					data:datos
 				}
 
 				$http(http)
@@ -21,9 +23,8 @@
 						  .catch(folder);
 
 				function folder(data) {
-					console.log(data)
-					if (data) deferido.resolve(data);
-					else deferido.reject();
+					if (data.data) deferido.resolve(data.data.message);
+					else deferido.reject("data.data.error");
 					// console.log(data)
 				}
 				return deferido.promise;

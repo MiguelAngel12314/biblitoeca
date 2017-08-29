@@ -10,16 +10,17 @@
 	function upload(uploadService) {
 		var vm = this;
 
+		vm.files = {};
 		/*functions*/
 		vm.crearFolder = crearFolder;
 
 		function crearFolder() {
-			uploadService.init()
+			uploadService.init(vm.files)
 				  .then(createFolder)
 				  .catch(createFolder);
 
 			function createFolder(data) {
-				console.log(data);
+				alert(data)
 			}
 
 			// console.log(vm.newfolder);
