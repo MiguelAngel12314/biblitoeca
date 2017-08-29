@@ -1,12 +1,27 @@
 {
+<<<<<<< HEAD
   "name": "PaginaWeb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+=======
+  "name": "ejemplos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hola.js",
+>>>>>>> b13ce093881d5bfe40070f2fbc42b2d097961a1e
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
+<<<<<<< HEAD
   "license": "ISC"
+=======
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+>>>>>>> b13ce093881d5bfe40070f2fbc42b2d097961a1e
 }
